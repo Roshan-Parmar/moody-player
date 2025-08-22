@@ -11,7 +11,8 @@ function uploadFile(file) {
     imagekit.upload(
       {
         file: file.buffer,           // file buffer
-        fileName: file.originalname, // keep original name
+        fileName: file.originalname,
+        folder: "songs" // keep original name
       },
       (error, result) => {
         if (error) {
